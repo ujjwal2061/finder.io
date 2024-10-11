@@ -1,0 +1,58 @@
+x<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" 
+      type="image/x-icon" 
+      href="favicon.png" >
+
+    <title>TextScan.io</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="index3.css">
+</head>
+<body>
+    <form class="container">
+        <div class="get-text">
+            <input type="search" class="searching" placeholder="Find your topic">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="profile-container">
+                <img src="profile.jpg" class="pic">
+            </div>
+        </div>
+        <span class="container1">
+            <div class="card">
+              <h3>Upload Files</h3>
+              <div class="drop_box">
+                <header>
+                  <h4>Select File here</h4>
+                </header>
+                <p>Files Supported: PDF, TEXT, DOC, DOCX</p>
+                <input type="file" hidden accept="application/pdf" id="fileID">
+              </div>
+              <button type="button" class="btn">Choose File</button>
+            </div>
+        </span>
+        
+        <div id="pdfContainer">
+            <div class="pdfViewer"></div>
+        </div>
+        <div class="text">
+        <div id="extractedText"></div>
+        </div>
+    </form>
+
+    <!-- Include PDF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+   
+ <script>
+      // Set the workerSrc path after including the script
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+    </script>
+    <!-- JavaScript file -->
+    <script src="index3.js"></script>
+
+</body>
+</html>
