@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const pdfViewer = document.querySelector(".pdfViewer");
   const extractedTextDiv = document.getElementById("extractedText");
 
-  
+  // some Chnagge is there to check git 
   // Event listener to open the file dialog
   select.addEventListener('click', function() {
     pdf.click();
